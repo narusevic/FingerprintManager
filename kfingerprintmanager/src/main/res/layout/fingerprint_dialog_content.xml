@@ -35,7 +35,7 @@
         android:id="@+id/fingerprint_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"
         android:text="@string/fingerprint_hint"
         android:gravity="center_horizontal"
