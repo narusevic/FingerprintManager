@@ -45,7 +45,7 @@ abstract class FingerprintBaseDialogFragment<T : FingerprintBaseDialogPresenter>
 
         val builder = AlertDialog.Builder(context, customDialogStyle)
         builder.setView(dialogRootView)
-        val textFieldDismiss = dialogRootView.findViewById(R.id.fingerprint_dismiss) as TextView;
+        val textFieldDismiss = dialogRootView.findViewById<TextView>(R.id.fingerprint_dismiss);
         textFieldDismiss.setOnClickListener({ presenter!!.close() })
 
         return builder.create().apply {
