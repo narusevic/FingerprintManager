@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatDialogFragment
 import android.support.v7.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.TextView
 import com.jesusm.kfingerprintmanager.KFingerprintManager
 import com.jesusm.kfingerprintmanager.R
 import com.jesusm.kfingerprintmanager.base.FingerprintAssetsManager
@@ -44,8 +45,8 @@ abstract class FingerprintBaseDialogFragment<T : FingerprintBaseDialogPresenter>
 
         val builder = AlertDialog.Builder(context, customDialogStyle)
         builder.setView(dialogRootView)
-
-        addDialogButtons(builder)
+        val textFieldDismiss = dialogRootView.findViewById(R.id.fingerprint_dismiss) as TextView;
+        textFieldDismiss.setOnClickListener({ presenter!!.close() })
 
         return builder.create().apply {
             alertDialog = this
@@ -72,7 +73,7 @@ abstract class FingerprintBaseDialogFragment<T : FingerprintBaseDialogPresenter>
     }
 
     private fun buildDialogContext(): Context =
-            if (customDialogStyle == 1) context else ContextThemeWrapper(context, customDialogStyle)
+        ContextThemeWrapper(context, R.style.FullScreenDialogStyle)
 
     override fun onFingerprintDisplayed() {
         updateDialogButtonText(DialogInterface.BUTTON_NEGATIVE, R.string.cancel)

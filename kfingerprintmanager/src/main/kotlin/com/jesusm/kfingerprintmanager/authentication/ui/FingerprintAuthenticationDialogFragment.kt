@@ -85,9 +85,9 @@ class FingerprintAuthenticationDialogFragment : FingerprintBaseDialogFragment<Fi
     }
 
     override fun addDialogButtons(dialogBuilder: AlertDialog.Builder) {
-        super.addDialogButtons(dialogBuilder)
+        //super.addDialogButtons(dialogBuilder)
 
-        dialogBuilder.setPositiveButton(R.string.use_password, null)
+        //dialogBuilder.setPositiveButton(R.string.use_password, null)
     }
 
     override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean =

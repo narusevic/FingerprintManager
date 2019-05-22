@@ -13,11 +13,12 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License
   -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="32dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    android:background="#FFFFFF">
 
     <include
         android:id="@+id/fingerprint_dialog_content"
@@ -27,6 +28,6 @@
         android:id="@+id/fingerprint_dialog_backup_content"
         layout="@layout/fingerprint_dialog_backup"
         android:visibility="invisible"
-        tools:visibility="visible"/>
+        tools:visibility="visible" />
 
-</FrameLayout>
+</RelativeLayout>

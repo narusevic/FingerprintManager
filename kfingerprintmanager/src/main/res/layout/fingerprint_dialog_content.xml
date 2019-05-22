@@ -22,35 +22,57 @@
     android:layout_gravity="center_horizontal"
     tools:showIn="@layout/fingerprint_dialog_container">
 
-    <TextView
-        android:id="@+id/fingerprint_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fingerprint_description"
-        android:textColor="?android:attr/textColorPrimary"
-        android:gravity="center_horizontal"
-        android:textSize="21sp" />
-
-    <TextView
-        android:id="@+id/fingerprint_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/fingerprint_hint"
-        android:gravity="center_horizontal"
-        android:textColor="?android:attr/textColorSecondary"
-        android:textSize="18sp" />
-
     <ImageView
         android:id="@+id/fingerprint_icon"
-        android:layout_width="@dimen/fingerprint_icon"
-        android:layout_height="@dimen/fingerprint_icon"
+        android:layout_width="@dimen/evarvest_icon_width"
+        android:layout_height="@dimen/evarvest_icon_height"
         android:layout_marginTop="16dp"
-        android:background="@drawable/fingerprint_image_background"
         android:padding="8dp"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/fingerprint_manager_icon_white_24dp"
+        android:src="@drawable/fingerprint_evarvest_icon_24dp"
         tools:tint="#0000fa" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fingerprint_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:showIn="@layout/fingerprint_dialog_container">
+
+        <ImageView
+            android:id="@+id/fingerprint_icon"
+            android:layout_width="@dimen/fingerprint_icon"
+            android:layout_height="@dimen/fingerprint_icon"
+            android:padding="8dp"
+            android:src="@drawable/fingerprint_manager_icon_white_24dp"
+            tools:tint="#0000fa" />
+
+        <TextView
+            android:id="@+id/fingerprint_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/fingerprint_hint"
+            android:textColor="#1AD6BA"
+            android:textSize="16sp"
+            android:gravity="center" />
+            
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fingerprint_dismiss"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/fingerprint_pass_code"
+        android:gravity="center_horizontal"
+        android:textColor="#ABB5B3"
+        android:textSize="16sp" />
 
 </LinearLayout>
